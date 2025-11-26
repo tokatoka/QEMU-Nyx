@@ -240,7 +240,7 @@ void init_aux_buffer(const char *filename)
     init_auxiliary_buffer(global_state.auxilary_buffer, global_state.auxilary_buffer_size);
 
     uint32_t misc_sz = misc_size();
-    printf("misc_size: %d\n", misc_sz)
+    printf("misc_size: %d\n", misc_sz);
     global_state.hprintf_tmp_buffer = (char *)malloc(misc_sz);
     memset(global_state.hprintf_tmp_buffer, 0, misc_size());
 }
