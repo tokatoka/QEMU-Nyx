@@ -239,7 +239,9 @@ void init_aux_buffer(const char *filename)
         (auxilary_buffer_t *)alloc_auxiliary_buffer(filename, global_state.auxilary_buffer_size);
     init_auxiliary_buffer(global_state.auxilary_buffer, global_state.auxilary_buffer_size);
 
-    global_state.hprintf_tmp_buffer = (char *)malloc(misc_size());
+    uint32_t misc_sz = misc_size();
+    printf("misc_size: %d\n", misc_sz)
+    global_state.hprintf_tmp_buffer = (char *)malloc(misc_sz);
     memset(global_state.hprintf_tmp_buffer, 0, misc_size());
 }
 
